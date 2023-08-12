@@ -12,7 +12,7 @@ export default function Nav(){
                         <a href="">Login/Register</a>
                     </li>
                     <li className="flex justify-center w-32 border-l pr-8">
-                        <a href="">English</a>
+                        <a href="">Français</a>
                     </li>
                 </ul>
 
@@ -22,9 +22,9 @@ export default function Nav(){
                     <img src={Photo}></img>
                 </div>
             </div>
-            <div className="flex justify-center items-center flex-1 border border-gray">
+            <div className="flex justify-center items-center flex-1 border border-gray min-w-[350px]">
                 <div className="w-1/3">
-                    <div className="flex flex-wrap">
+                    <div className="flex flex-nowrap">
                         <div className="border border-gray">
                             <a href="#" className="">
                                 <img src={Search} className="h-6 w-6 m-2" alt="" />
@@ -49,12 +49,9 @@ export default function Nav(){
         </div>
         <div id="lower-bar">
             <ul className="flex justify-center gap-6 my-4 font-semibold">
-                <li><a href="">HOME</a></li>
-                <li><a href="">ABOUT</a></li>
-                <li><a href="">PAGES</a></li>
-                <li><a href="">SERVICES</a></li>
-                <li><a href="">NEWS</a></li>
-                <li><a href="">CONTACT</a></li>
+                <li><a href="">Accueil</a></li>
+                <li><a href="">Produits</a></li>
+                <li><a href="">Contact</a></li>
             </ul>
 
         </div></>
