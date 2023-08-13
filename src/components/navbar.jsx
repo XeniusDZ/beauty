@@ -2,45 +2,53 @@ import Photo from "../images/ENTY.png"
 import Cart from "../images/cart.svg"
 import Menu from "../images/menu.svg"
 import Search from "../images/search.svg"
+import React, { useState } from 'react';
+
 
 export default function Nav(){
+    const isLoggedIn = false;
+    const [showDiv, setShowDiv] = useState(false);
+
+    const toggleDiv = () => {
+      setShowDiv(!showDiv);
+    };
     return(
-        <><div id="upper_bar" className="flex w-full h-20">
+        <>
+        <div id="upper_bar" className="flex w-full h-20">
+            
             <div className="flex justify-center items-center flex-1 border border-gray">
-                <ul className="flex justify-center font-semibold">
-                    <li className="flex justify-center w-32 border-r pr-6">
+            {!isLoggedIn &&(
+                <ul className="flex justify-center font-semibold max-lg:hidden">
+                    <li className="flex justify-center w-32">
                         <a href="">Login/Register</a>
                     </li>
-                    <li className="flex justify-center w-32 border-l pr-8">
-                        <a href="">Français</a>
-                    </li>
                 </ul>
-
+            )}
             </div>
+            
             <div className="flex w-96 justify-center items-center border border-gray">
                 <div className="w-32">
                     <img src={Photo}></img>
                 </div>
             </div>
-            <div className="flex justify-center items-center flex-1 border border-gray min-w-[350px]">
+            <div className="flex justify-center items-center flex-1 border border-gray">
                 <div className="w-1/3">
                     <div className="flex flex-nowrap">
-                        <div className="border border-gray">
+                        <div className="border border-gray max-lg:hidden">
                             <a href="#" className="">
                                 <img src={Search} className="h-6 w-6 m-2" alt="" />
                             </a>
 
                         </div>
-                        <div className="border border-gray">
-                            <a href="">
+                        <div className="relative border border-gray max-sm:border-0">
+                            <a onClick={toggleDiv}>
                                 <img src={Cart} className="h-6 w-6 m-2" alt="" />
                             </a>
+                            {showDiv && (
+                                <div className="mt-4 h-64 w-64 bg-white border border-gray rounded rounded absolute top-6 lg:left-0 z-10 max-sm:right-0 max-md:right-0 max-lg:right-0"></div>)}
                         </div>
-                        <div className="border border-gray">
-                            <a href="">
-                                <img src={Menu} className="h-6 w-6 m-2" alt="" />
-                            </a>
-                        </div>
+                        
+                        
                     </div>
 
                 </div>
