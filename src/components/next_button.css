@@ -1,0 +1,22 @@
+
+
+.arrow_right{
+    height: 40%;
+    width: 40%;
+    margin-right: 12%;
+    }
+
+
+
+.arrow_right div{
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+    height: 100%;
+    width: 100%;
+    transform: rotate(135deg);
+}
+
+.circle:hover .inside_arrow{
+        border-top: 3px solid black;
+        border-left: 3px solid black;
+    }
