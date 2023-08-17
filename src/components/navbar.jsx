@@ -20,7 +20,7 @@ export default function Nav(){
             {!isLoggedIn &&(
                 <ul className="flex justify-center font-semibold max-lg:hidden">
                     <li className="flex justify-center w-32">
-                        <a href="">Login/Register</a>
+                        <a href="/Signin">Login/Register</a>
                     </li>
                 </ul>
             )}

@@ -1,0 +1,14 @@
+input {
+    outline: none;
+    font-size: 30px;
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+input:focus{
+    border-bottom-color: rgb(198, 198, 198)
+  }
+  
+
+span{
+    width: 10px;
+}
